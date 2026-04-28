@@ -1,0 +1,88 @@
+http://localhost:3000/api/register
+method-post
+
+name:Ravindra
+email:rahulnew0102@gmail.com
+mobile:6299812434
+password:rahul@1234567
+
+response:-
+{
+    "success": true,
+    "message": "User registered successfully",
+    "data": {
+        "id": 8,
+        "name": "Ravindra",
+        "email": "rahulnew0102@gmail.com",
+        "image": "/uploads/1777369962791-fevicon.jpeg"
+    }
+}
+
+
+
+
+http://localhost:3000/api/login
+method: post
+{
+
+    "email":"rahulnew@gmail.com",
+    "password":"rahul@1234567"
+}
+
+response:-
+{
+    "message": "Login successful",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NiwiZW1haWwiOiJyYWh1bG5ld0BnbWFpbC5jb20iLCJpYXQiOjE3NzczNjk3MzYsImV4cCI6MTc3NzM3MzMzNn0.qOrRljNFCqETT_JUi1HNV08dQhsF_0JaRuUTrw8tZL0",
+    "user": {
+        "id": 6,
+        "name": "Ravindra",
+        "email": "rahulnew@gmail.com"
+    }
+}
+
+http://localhost:3000/api/send-otp
+method:post
+{
+  "identifier": "rahulnew0102@gmail.com"
+}
+response:->
+
+{
+    "message": "OTP sent successfully",
+    "otp": 601654,
+    "sentTo": "rahulnew0102@gmail.com"
+}
+
+
+
+
+http://localhost:3000/api/verify-otp
+method:post
+{
+  "identifier": "7277924489",
+  "otp": "601654"
+}
+response :->
+
+{
+    "message": "Login successful",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiZW1haWwiOiJyYWh1bG5ldzAxMDJAZ21haWwuY29tIiwibW9iaWxlIjoiNzI3NzkyNDQ4OSIsImlhdCI6MTc3NzM3MTA5OSwiZXhwIjoxNzc3Mzc0Njk5fQ.jqauXYdhZ-E-4rx7x7degyasOhbN8xP_oMIZApoU5WA",
+    "user": {
+        "id": 8,
+        "name": "Ravindra",
+        "email": "rahulnew0102@gmail.com",
+        "mobile": "7277924489"
+    }
+}
+
+
+
+http://localhost:3000/api/profile
+method:get 
+Token :Bearer Token
+
+{
+    "id": 8,
+    "name": "Ravindra",
+    "email": "rahulnew0102@gmail.com"
+}
